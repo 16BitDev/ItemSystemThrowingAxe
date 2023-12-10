@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://dpa2ouxi75sfx"]
+
+[ext_resource type="PackedScene" uid="uid://dh4pblj1amsiq" path="res://scenes/player.tscn" id="2_w1oqn"]
+[ext_resource type="PackedScene" uid="uid://dptvdenbx2nmv" path="res://scenes/throwing_axe.tscn" id="2_xd6bc"]
+
+[node name="TestScene" type="Node2D"]
+
+[node name="player" parent="." instance=ExtResource("2_w1oqn")]
+position = Vector2(73, 112)
+
+[node name="ThrowingAxe" parent="." instance=ExtResource("2_xd6bc")]
+position = Vector2(156, 77)

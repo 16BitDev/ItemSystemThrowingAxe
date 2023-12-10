@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://dh4pblj1amsiq"]
+
+[ext_resource type="Script" path="res://scenes/ActionBar.gd" id="1_1xpii"]
+[ext_resource type="PackedScene" uid="uid://owggmdxu1qcs" path="res://scenes/slot.tscn" id="1_65koc"]
+[ext_resource type="Script" path="res://scenes/player.gd" id="1_gnv30"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_7uy16"]
+size = Vector2(20, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tiusm"]
+
+[node name="player" type="CharacterBody2D"]
+script = ExtResource("1_gnv30")
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="ActionBar" type="HBoxContainer" parent="UI"]
+unique_name_in_owner = true
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -40.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("1_1xpii")
+
+[node name="slot" parent="UI/ActionBar" instance=ExtResource("1_65koc")]
+layout_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("PlaceholderTexture2D_7uy16")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_tiusm")

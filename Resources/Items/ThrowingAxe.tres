@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://c2sugw1d4qpjw"]
+
+[ext_resource type="Texture2D" uid="uid://b0ndicptsdwfx" path="res://assets/Clockwork raven - Weapons and Potions - Free pack/16x16/tile025.png" id="1_w2g2y"]
+[ext_resource type="Script" path="res://scenes/Item.gd" id="2_xadom"]
+
+[resource]
+script = ExtResource("2_xadom")
+icon = ExtResource("1_w2g2y")
+name = "Throwing Axe"
+type = "Weapon"
+rarity = "Rare"
+description = "Can Boomerang."
